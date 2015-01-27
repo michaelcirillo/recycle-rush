@@ -28,6 +28,9 @@
 #define DRIVE_MOTOR_E_ID 5
 #define DRIVE_MOTOR_F_ID 6
 
+#define JOYHAT_X 5
+#define JOYHAT_Y 6
+
 #define WINCH_TALON_PWM 0
 
 #define JOY_DRV_DEAD_X 0.05

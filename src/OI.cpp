@@ -72,6 +72,14 @@ double OI::getJoyDrvZ(){
     return scaled;
 }
 
+int OI::getJoyHatX() {
+    return JoyDrv->GetRawAxis(JOYHAT_X);
+}
+
+int OI::getJoyHatY() {
+    return JoyDrv->GetRawAxis(JOYHAT_Y);
+}
+
 double OI::getJoyDrvThrottle(){
     //return (JoyDrv->GetThrottle()-1.0)/2.0;
     return JoyDrv -> GetThrottle();

@@ -32,20 +32,20 @@ Chassis::~Chassis() {
 
 }
 
-void Chassis::Drive(double vX, double vY, double vZ, double Throttle, double k) {
+void Chassis::Drive(double vX, double vY, double vZ, double Throttle, double k, bool hat_drive) {
     //Set up variables for each motor
     double mA;
     double mB;
     double mC;
     double mD;
 
-    if(fieldCentered) {
+    if(fieldCentered && !hat_drive) {
         float tempVX = vX;
         vX = lib4774::fieldOrient(lib4774::joystick_axis::X, CommandBase::imu->GetYaw(), vX, vY);
         vY = lib4774::fieldOrient(lib4774::joystick_axis::Y, CommandBase::imu->GetYaw(), tempVX, vY);
     }
 
-    SmartDashboard::PutBoolean("Field Oriented: ", fieldCentered);
+    SmartDashboard::PutBoolean("Field Oriented: ", (fieldCentered && !hat_drive));
     SmartDashboard::PutNumber("vX: ", vX);
     SmartDashboard::PutNumber("vY: ", vY);
 

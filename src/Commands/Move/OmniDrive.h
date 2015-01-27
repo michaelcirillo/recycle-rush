@@ -4,6 +4,8 @@
 #include "CommandBase.h"
 #include "WPILib.h"
 
+#define HAT_SCALE_DOWN_FACTOR 5
+
 class OmniDrive: public CommandBase
 {
   public:

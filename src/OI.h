@@ -30,6 +30,8 @@ public:
     double getJoyDrvX();
     double getJoyDrvY();
     double getJoyDrvZ();
+    int getJoyHatX();
+    int getJoyHatY();
     double getJoyDrvThrottle();
     double applyDeadZone(double,double);
 };
